@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" class ="scrollsmooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <!--Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkmode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for modern icons -->
+    <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZmH+zGtG+Nv9e+E1fzlZ5VZC9eD9fQW1p5h
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col justify-between">
+
+     <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="font-bold text-xl tracking-tight text-indigo-600 dark:text-indigo-400 flex items-center gap-2">
+                <i class="fa-solid fa-terminal"></i> Alex.dev
+                </a>
+
+                 <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills & Interests</a>
+                <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <!-- Dark Mode Toggle Button -->
+                <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <i id="theme-toggle-icon" class="fa-solid fa-moon text-lg"></i>
+
+                     </button>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 focus:outline-none">
+
+   <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+            <a href="#about" class="block py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 font-medium">About</a>
+            <a href="#skills" class="block py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 font-medium">Skills & Interests</a>
+            <a href="#contact" class="block py-2 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 font-medium">Contact</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="relative overflow-hidden py-20 lg:py-32">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 text-xs sm:text-sm font-semibold border border-indigo-200 dark:border-indigo-800">
+                            <span class="w-2 h-2 rounded-full bg-indigo-600 dark:bg-indigo-400 animate-pulse"></span>
+                            sample.
+                        </div>
+                        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600 dark:from-indigo-400 dark:to-violet-400">Alex Morgan</span>
+                        </h1>
+                        <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0">
+                             sample web ng mga tekul ma bai.
+                        </p>A
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                            <a href="#contact" class="px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-lg shadow-indigo-500/25 transition-all transform hover:-translate-y-0.5">
+                                Get in Touch <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                            <a href="#skills" class="px-6 py-3.5 rounded-xl bg-slate-200/70 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 font-medium transition-all">
+                                Explore Skills
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Hero Avatar / Visual Card -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-72 h-72 sm:w-80 sm:h-80 rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center">
+                            <img src="https://placehold.co/400x400/4f46e5/ffffff?text=AM" alt="Alex Morgan Avatar" class="w-full h-full object-cover opacity-90" onerror="this.src='https://placehold.co/400x400/334155/ffffff?text=Avatar'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent flex items-end p-6">
+                                <div class="text-white">
+                                    <p class="text-sm font-semibold opacity-90">Based in San Francisco, CA</p>
+                                    <p class="text-xs opacity-75">Code. Design. Innovate.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold tracking-tight mb-4">About Me</h2>
+                    <p class="text-slate-600 dark:text-slate-400">Get to know more about my background, philosophy, and what drives me.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+                        <p>
+                            Hello! I am a software creator with over 5 years of experience building modern web solutions. My journey started with a fascination for interactive design and evolved into full-scale system architecture.
+                        </p>
+                        <p>
+                            I specialize in JavaScript ecosystems, frontend frameworks like React and Vue, and reliable backend services with Node.js. When I'm not writing code, you can find me exploring typography, contributing to open-source libraries, or hiking scenic mountain trails.
+                        </p>
+                        <div class="pt-4 flex gap-4">
+                            <div class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm flex-1">
+                                <span class="block text-2xl font-bold text-indigo-600 dark:text-indigo-400">5+</span>
+                                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Years Experience</span>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm flex-1">
+                                <span class="block text-2xl font-bold text-indigo-600 dark:text-indigo-400">40+</span>
+                                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Completed Projects</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Quick stats / highlights card -->
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-6">
+                        <h3 class="text-xl font-semibold">Core Values</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 p-1 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-sm font-semibold">User-Centric Design</strong>
+                                    <span class="text-xs text-slate-500 dark:text-slate-400">Prioritizing intuitive workflows and accessibility in every product.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 p-1 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-sm font-semibold">Clean Code Standards</strong>
+                                    <span class="text-xs text-slate-500 dark:text-slate-400">Writing maintainable, scalable, and well-tested codebase architectures.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 p-1 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-sm font-semibold">Continuous Learning</strong>
+                                    <span class="text-xs text-slate-500 dark:text-slate-400">Constantly adapting to emerging technologies and industry paradigms.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight mb-4">Skills & Interests</h2>
+                    <p class="text-slate-600 dark:text-slate-400">Technologies I work with and hobbies that inspire my creative process.</p>
+                    
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap justify-center gap-2 mt-8">
+                        <button onclick="filterCards('all')" class="filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-indigo-600 text-white shadow-sm transition-all" data-filter="all">All</button>
+                        <button onclick="filterCards('tech')" class="filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 transition-all" data-filter="tech">Technologies</button>
+                        <button onclick="filterCards('interest')" class="filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 transition-all" data-filter="interest">Interests</button>
+                    </div>
+                </div>
+
+                <!-- Cards Grid -->
+                <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="card-item bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all group" data-category="tech">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">JavaScript / TypeScript</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Advanced modern ESNext, type safety, asynchronous patterns, and high-performance DOM manipulation.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card-item bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all group" data-category="tech">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-react"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">React & Next.js</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Component-driven architecture, state management, server-side rendering, and responsive UI design.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card-item bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all group" data-category="tech">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Node.js & Databases</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">RESTful APIs, Express, PostgreSQL, MongoDB, and secure authentication pipelines.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="card-item bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all group" data-category="interest">
+                        <div class="w-12 h-12 rounded-xl bg-violet-50 dark:bg-violet-950/60 text-violet-600 dark:text-violet-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-mountain-sun"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Outdoor Hiking</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Exploring backcountry trails, scaling peaks, and finding mental clarity in nature.</p>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="card-item bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all group" data-category="interest">
+                        <div class="w-12 h-12 rounded-xl bg-violet-50 dark:bg-violet-950/60 text-violet-600 dark:text-violet-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-camera-retro"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Street Photography</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Capturing candid city moments, architectural geometry, and moody lighting.</p>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="card-item bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all group" data-category="interest">
+                        <div class="w-12 h-12 rounded-xl bg-violet-50 dark:bg-violet-950/60 text-violet-600 dark:text-violet-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Sci-Fi Literature</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Reading speculative fiction and exploring futuristic world-building concepts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-t border-slate-200 dark:border-slate-800">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight mb-4">Let's Connect</h2>
+                    <p class="text-slate-600 dark:text-slate-400">Have a project in mind or want to say hello? Drop a message below!</p>
+                </div>
+
+                <div class="bg-white dark:bg-slate-900 p-8 sm:p-10 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg">
+                    <!-- Form Status Feedback Box -->
+                    <div id="form-message" class="hidden mb-6 p-4 rounded-xl text-sm font-medium"></div>
+
+                    <form id="contact-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Your Name</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all" placeholder="Jane Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Email Address</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all" placeholder="jane@example.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Subject</label>
+                            <input type="text" id="subject" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all" placeholder="Project Collaboration">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Message</label>
+                            <textarea id="message" rows="5" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg shadow-indigo-500/25 transition-all transform hover:-translate-y-0.5">
+                            Send Message <i class="fa-solid fa-paper-plane ml-2 text-sm"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <p class="text-sm text-slate-500 dark:text-slate-400">&copy; 2026 Alex Morgan. All rights reserved.</p>
+            <div class="flex items-center gap-4 text-lg">
+                <a href="#" aria-label="GitHub" class="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors"><i class="fa-brands fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn" class="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Twitter" class="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Dribbble" class="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors"><i class="fa-brands fa-dribbble"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleIcon = document.getElementById('theme-toggle-icon');
+        const htmlElement = document.documentElement;
+
+        // Check local storage or system preference on load
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+            themeToggleIcon.classList.remove('fa-moon');
+            themeToggleIcon.classList.add('fa-sun');
+        } else {
+            htmlElement.classList.remove('dark');
+            themeToggleIcon.classList.remove('fa-sun');
+            themeToggleIcon.classList.add('fa-moon');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                themeToggleIcon.classList.remove('fa-sun');
+                themeToggleIcon.classList.add('fa-moon');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggleIcon.classList.remove('fa-moon');
+                themeToggleIcon.classList.add('fa-sun');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Skills & Interests Filter Function
+        function filterCards(category) {
+            const cards = document.querySelectorAll('.card-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Update button styles
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.classList.remove('bg-slate-200', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+                    btn.classList.add('bg-indigo-600', 'text-white', 'shadow-sm');
+                } else {
+                    btn.classList.remove('bg-indigo-600', 'text-white', 'shadow-sm');
+                    btn.classList.add('bg-slate-200', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+                }
+            });
+
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Contact Form Submission Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const msgBox = document.getElementById('form-message');
+
+            // Display custom non-intrusive feedback message instead of alert()
+            msgBox.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+            msgBox.classList.add('bg-emerald-100', 'dark:bg-emerald-950/60', 'text-emerald-700', 'dark:text-emerald-300', 'border', 'border-emerald-200', 'dark:border-emerald-800');
+            msgBox.innerHTML = `<i class="fa-solid fa-circle-check mr-2"></i> Thank you, ${name}! Your message has been sent successfully. I will get back to you soon.`;
+
+            // Reset form
+            document.getElementById('contact-form').reset();
+
+            // Auto-hide message after 6 seconds
+            setTimeout(() => {
+                msgBox.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
+
+
+</html>
